@@ -19,6 +19,10 @@ from absl import logging
 import keras
 from keras import backend as K
 from keras.models import model_from_json, model_from_yaml
+from keras_gcnn.layers import GConv2D, GBatchNorm
+from keras_gcnn.layers.pooling import GroupPool
+
+from groupy.gconv.tensorflow_gconv.splitgconv2d import gconv2d_util, gconv2d
 
 K.set_learning_phase(0)
 FLAGS = flags.FLAGS
